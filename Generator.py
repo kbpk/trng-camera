@@ -1,7 +1,6 @@
 import argparse
 import math
 import timeit
-from typing import List
 
 import numpy as np
 import pandas as pd
@@ -20,7 +19,7 @@ class Generator:
         self.cols: int = expected_no_bits_sqrt
         self.rows: int = expected_no_bits_sqrt
 
-        self.matrix: List[List[int]] = [[0 for j in range(self.cols)] for i in range(self.rows)]
+        self.matrix: list[list[int]] = [[0 for j in range(self.cols)] for i in range(self.rows)]
         self.matrix_length: int = self.cols * self.rows
 
         self.current_length: int = 0
@@ -51,7 +50,7 @@ class Generator:
                 self.current_length += 1
                 self.col += 1
 
-    def get_hashed_matrix(self) -> List[int]:
+    def get_hashed_matrix(self) -> list[int]:
         if self.current_length < self.matrix_length:
             raise Exception('Matrix shall be filled')
 

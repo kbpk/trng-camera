@@ -21,7 +21,7 @@ class Camera:
         self.cap.set(cv2.CAP_PROP_FPS, fps)
         # TODO: disable auto settings -> set exposure, brightness, ... manually
 
-    def take_frames(self, n: int) -> List:
+    def take_frames(self, n: int) -> list:
         frames = []
 
         for i in range(self.no_frames_auto_settings + n):
