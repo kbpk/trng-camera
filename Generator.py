@@ -63,7 +63,7 @@ class Generator:
         return no_frames
 
     def is_matrix_filled(self) -> bool:
-        return self.current_length > self.matrix_length
+        return self.current_length == self.matrix_length
 
 
 if __name__ == '__main__':
